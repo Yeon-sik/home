@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeAgentAI 리더보드 분석기 by Yeonsik</title>
+<link rel="stylesheet" href="../static/css/common.css">
+<link rel="stylesheet" href="../static/css/base.css">
+<link rel="stylesheet" href="../static/css/deagent-check.css">
+<script src="../static/js/back-button.js" defer></script>
+</head>
+<body>
+
+<h1>연식이의 DeAgentAI 리더보드 분석기</h1>
+<p>페이지 로드 시 상위 130명 데이터를 자동 불러옵니다.<br>
+닉네임(2글자 이상)을 입력하면 등수, 포인트, 비율, 예상 보상액이 표시됩니다<br>
+확정된 보상이 아니며, $6,800를 순위별로 차등 지급 했을 경우의 예상 보상액입니다.</p>
+
+<input type="text" id="searchBox" placeholder="닉네임 입력 (2글자 이상)" />
+<div id="summary" class="loading">데이터 불러오는 중...</div>
+<div id="searchResults"></div>
+
+<table id="leaderTable">
+  <thead>
+    <tr>
+      <th>등수</th>
+      <th>닉네임</th>
+      <th>Daily Point</th>
+      <th>Total Point</th>
+      <th>비율(%)</th>
+      <th>예상 보상($)</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script src="../static/js/deagent-check.js"></script>
+
+</body>
+</html>

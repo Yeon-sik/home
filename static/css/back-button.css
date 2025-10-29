@@ -1,0 +1,43 @@
+.global-back-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+}
+
+.global-back-button .back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--accent-pink);
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-glow);
+  transition: all 0.2s ease;
+}
+
+/* remove underline hover effect from global link rule */
+.global-back-button .back-btn::after { display: none !important; }
+
+.global-back-button .back-btn:hover {
+  background: var(--accent-pink);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-1px);
+}
+
+.global-back-button .arrow {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .global-back-button { top: 12px; left: 12px; }
+  .global-back-button .back-btn { padding: 7px 12px; font-weight: 600; }
+}
+
+

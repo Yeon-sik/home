@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeonsik's Profile Page</title>
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/base.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 프로필 카드 (기존 방식) -->
+        <div class="profile-card" onclick="toggleBio()">
+            <h2>Yeonsik's Profile</h2>
+            <div class="bio" id="bio">
+                <p>안녕하세요! 저는 Yeonsik입니다. 여기에 약력을 추가하세요.</p>
+            </div>
+        </div>
+
+        <!-- 하단 2x2 그리드 박스들 -->
+        <div class="grid-container">
+            <a href="https://x.com/yeonsik_x" class="grid-button">
+                <div class="button-bg">
+                    <img src="static/img/1.png" alt="X Background">
+                </div>
+                <div class="button-overlay">
+                    <span>X로 이동</span>
+                </div>
+            </a>
+            
+            <a href="yapping/choice-menu.html" class="grid-button">
+                <div class="button-bg">
+                    <img src="static/img/1.png" alt="Yapping Background">
+                </div>
+                <div class="button-overlay">
+                    <span>야핑 도구로 이동</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleBio() {
+            const bio = document.getElementById('bio');
+            bio.style.display = bio.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

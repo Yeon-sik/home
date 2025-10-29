@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapping 체크 도구</title>
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/yapping-check.css">
+    <script src="../static/js/back-button.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 제목 카드 -->
+        <div class="profile-card">
+            <h2>Yapping 체크 도구</h2>
+            <div class="bio">
+                <p>Yapping을 할만한 프로젝트 목록을 확인하고 관리하세요.</p>
+            </div>
+        </div>
+
+        <!-- 분류 버튼들 -->
+        <div class="category-buttons">
+            <!-- 활성화된 항목 개수 표시 -->
+            <div class="filter-counter">
+                <span class="counter-text">표시된 항목: <span id="active-count">0</span>개</span>
+            </div>
+            <div class="button-separator"></div>
+            <button class="category-btn" data-category="korea-bonus">Korea Bonus</button>
+            <div class="button-separator"></div>
+            <button class="category-btn" data-category="only-live">Only Live</button>
+            <button class="category-btn" data-category="only-end">Only End</button>
+            <div class="button-separator"></div>
+            <button class="category-btn" data-category="0yaps">0Yaps</button>
+            <button class="category-btn" data-category="need-yaps">Need Yaps</button>
+            <div class="button-separator"></div>
+            <button class="category-btn" data-category="monthly">Monthly</button>
+            <button class="category-btn" data-category="weekly">Weekly</button>
+            <button class="category-btn" data-category="daily">Daily</button>
+        </div>
+
+        <!-- Kaito 섹션 -->
+        <div class="platform-section" id="kaito-section">
+            <h3 class="platform-title">Kaito</h3>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <img src="../static/img/yapping-check/talus-main.png" alt="TALUS Logo">
+                        </div>
+                        
+                        <div class="project-name">
+                            <a href="https://yaps.kaito.ai/talus" target="_blank" class="project-link">TALUS</a>
+                        </div>
+                        <div class="status-tags">
+                            <div class="status-tag status-live">Live</div>
+                        </div>
+                        <div class="bonus-tags">
+                            <div class="bonus-tag" data-filter="0yaps">0Yaps</div>
+                            <div class="bonus-tag" data-filter="korea-bonus">Korea Bonus</div>
+                        </div>
+                    </div>
+                    <div class="project-right">
+                        <div class="info-section">
+                            <div class="section-title">정보</div>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-label">기간</div>
+                                    <div class="info-value">2025-09-18 ~ TBD</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">보상풀</div>
+                                    <div class="info-value">전체 토큰 공급량의 0.3% <br> (20% Kaito Eco, 80% Yapper)</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">보상 인원</div>
+                                    <div class="info-value">Top 100 Creator(80%) <br> +  Kaito ECO(20%)</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">지역 할당</div>
+                                    <div class="info-value">KR + CN + JP Yapper에게 <br> 보상풀의 30% 할당</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">공지사항</div>
+                                    <div class="info-value">
+                                        <a href="https://x.com/KaitoAI/status/1968662420089422273" class="notice-btn" target="_blank">Go!</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">분야</div>
+                                    <div class="info-value">AI Agent, Prediction AI</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">특이사항</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">베스팅 여부</div>
+                                    <div class="info-value">TGE시 20%, 80%는 3개월 이후 9개월간 <br>배분</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">주요 인물</div>
+                                    <div class="info-value">CEO: <a href="https://x.com/0xgmike" target="_blank" class="notice-btn">Mike</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todo-section">
+                            <div class="section-title">할 일</div>
+                            <div class="todo-content">
+                                <ul class="todo-list">
+                                    <li>Yapping: <a href="https://x.com/Talus_Labs" target="_blank" class="todo-link">Go!</a></li>
+                                    <li>Talus hub point: <a href="https://hub.talus.network/loyalty" target="_blank" class="todo-link">Go!</a></li>
+                                    <li>Idol.fun: <a href="https://idol.fun" target="_blank" class="todo-link">Go!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <img src="../static/img/yapping-check/kindred-main.png" alt="KINDRED Logo">
+                        </div>
+                        
+                        <div class="project-name">
+                            <a href="https://waitlist.kindredlabs.ai/" target="_blank" class="project-link">KINDRED</a>
+                        </div>
+                        <div class="status-tags">
+                            <div class="status-tag status-onboard">Onboard</div>
+                        </div>
+                        <div class="bonus-tags">
+                        </div>
+                    </div>
+                    <div class="project-right">
+                        <div class="info-section">
+                            <div class="section-title">정보</div>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-label">기간</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">보상풀</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">보상 인원</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">지역 할당</div>
+                                    <div class="info-value">행복회로 돌리는 중</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">공지사항</div>
+                                    <div class="info-value">
+                                        <div class="info-value">-</div>
+                                        <!-- <a href="https://waitlist.kindredlabs.ai/" class="notice-btn" target="_blank">Go!</a> -->
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">분야</div>
+                                    <div class="info-value">AI</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">특이사항</div>
+                                    <div class="info-value">감정을 가진 AI</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">베스팅 여부</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">주요 인물</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todo-section">
+                            <div class="section-title">할 일</div>
+                            <div class="todo-content">
+                                <ul class="todo-list">
+                                    <li>WaitList 등록 및 일일 보상: <a href="https://waitlist.kindredlabs.ai/" target="_blank" class="todo-link">Go!</a></li>
+                                    <li>펭구 밥주기: <a href="https://chromewebstore.google.com/detail/kindred-beta/ahcgoinofnkkmadlmljimgaofodpdmec" target="_blank" class="todo-link">Go!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item coming-soon">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <div style="color: var(--accent-pink); font-size: 2rem;">+</div>
+                        </div>
+                        <div class="project-name">추가 예정입니다</div>
+                    </div>
+                    <div class="project-right">
+                        <div class="todo-content">
+                            더 많은 Kaito 프로젝트가 곧 추가될 예정입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- cookie.fun 섹션 -->
+        <div class="platform-section" id="cookie-section">
+            <h3 class="platform-title">cookie.fun</h3>
+            <div class="project-list">
+                <div class="project-item coming-soon">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <div style="color: var(--accent-pink); font-size: 2rem;">+</div>
+                        </div>
+                        <div class="project-name">추가 예정입니다</div>
+                    </div>
+                    <div class="project-right">
+                        <div class="todo-content">
+                            cookie.fun 관련 프로젝트가 곧 추가될 예정입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yap market 섹션 -->
+        <div class="platform-section" id="yapmarket-section">
+            <h3 class="platform-title">Yap market</h3>
+            <div class="project-list">
+                <div class="project-item coming-soon">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <div style="color: var(--accent-pink); font-size: 2rem;">+</div>
+                        </div>
+                        <div class="project-name">추가 예정입니다</div>
+                    </div>
+                    <div class="project-right">
+                        <div class="todo-content">
+                            Yap market 관련 프로젝트가 곧 추가될 예정입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETC 섹션 -->
+        <div class="platform-section" id="etc-section">
+            <h3 class="platform-title">ETC.</h3>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <img src="../static/img/yapping-check/DeAgentAI-main.png" alt="DeAgentAI Logo">
+                        </div>
+                        <div class="project-name">
+                            <a href="https://x.com/DeAgentAI/status/1980937171520606334" target="_blank" class="project-link">DeAgentAI</a>
+                        </div>
+                        <div class="status-tags">
+                            <div class="status-tag status-live">Live</div>
+                        </div>
+                        <div class="bonus-tags">
+                            <div class="bonus-tag" data-filter="0yaps">0Yaps</div>
+                            <div class="bonus-tag" data-filter="korea-bonus">Korea Bonus</div>
+                        </div>
+                        <div class="payout-tags">
+                            <div class="bonus-tag" data-filter="daily">Daily</div>
+                        </div>
+                    </div>
+                    <div class="project-right">
+                        <div class="info-section">
+                            <div class="section-title">정보</div>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-label">기간</div>
+                                    <div class="info-value">2025-10-22 ~ 2025-11-04</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">보상풀</div>
+                                    <div class="info-value">$6,800 순위별 차등 지급</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">보상 인원</div>
+                                    <div class="info-value">상위 130명</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">지역 할당</div>
+                                    <div class="info-value">Only Korea</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">공지사항</div>
+                                    <div class="info-value">
+                                        <a href="https://x.com/DeAgentAI/status/1980937171520606334" class="notice-btn" target="_blank">Go!</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">분야</div>
+                                    <div class="info-value">AI</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">특이사항</div>
+                                    <div class="info-value">AI 인프라 구축</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">베스팅 여부</div>
+                                    <div class="info-value">-</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">주요 인물</div>
+                                    <div class="info-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todo-section">
+                            <div class="section-title">할 일</div>
+                            <div class="todo-content">
+                                <ul class="todo-list">
+                                    <li>Yapping: <a href="https://x.com/DeAgentAI" target="_blank" class="todo-link">Go!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item coming-soon">
+                    <div class="project-left">
+                        <div class="project-image">
+                            <div style="color: var(--accent-pink); font-size: 2rem;">+</div>
+                        </div>
+                        <div class="project-name">추가 예정입니다</div>
+                    </div>
+                    <div class="project-right">
+                        <div class="todo-content">
+                            기타 플랫폼 관련 프로젝트가 곧 추가될 예정입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="../static/js/yapping-check.js"></script>
+</body>
+</html>

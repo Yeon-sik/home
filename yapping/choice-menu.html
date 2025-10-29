@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapping 도구 바로가기</title>
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/choice-menu.css">
+    <script src="../static/js/back-button.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 제목 카드 -->
+        <div class="profile-card">
+            <h2>Yapping 도구 바로가기</h2>
+            <div class="bio">
+                <p>다양한 Yapping 도구들을 선택하여 사용하세요.</p>
+            </div>
+        </div>
+
+        <!-- 하단 2x1 그리드 박스들 -->
+        <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));">
+            <a href="kaito-tool.html" class="grid-button">
+                <div class="button-bg">
+                    <img src="../static/img/1.png" alt="Kaito Tool Background">
+                </div>
+                <div class="button-overlay">
+                    <span>마인드쉐어를 찾아보자</span>
+                </div>
+            </a>
+            
+            <a href="yapping-check.html" class="grid-button">
+                <div class="button-bg">
+                    <img src="../static/img/1.png" alt="Yapping Check Background">
+                </div>
+                <div class="button-overlay">
+                    <span>Yapping 체크 도구</span>
+                </div>
+            </a>
+
+            <a href="DeAgentAI-Check.html" class="grid-button">
+                <div class="button-bg">
+                    <img src="../static/img/1.png" alt="DeAgentAI Check Background">
+                </div>
+                <div class="button-overlay">
+                    <span>DeAgentAI 야핑 수익 계산기</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 페이지 로드 시 bio 자동 표시
+        document.addEventListener('DOMContentLoaded', function() {
+            const bio = document.querySelector('.bio');
+            bio.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+

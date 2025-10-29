@@ -1,0 +1,100 @@
+/* DeAgentAI 리더보드 페이지 전용 스타일 (검정+분홍 테마) */
+body {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  padding-top: 72px; /* give space for fixed back button */
+}
+
+h1 {
+  color: var(--accent-pink);
+  margin-bottom: 10px;
+  text-align: center; /* center title */
+}
+
+/* center the decorative underline from common.css */
+h1::after {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Center paragraph under title */
+p {
+  text-align: center;
+}
+
+/* Center the search input */
+#searchBox {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Center summary text and search result texts */
+#summary, #searchResults {
+  text-align: center;
+}
+
+#searchBox {
+  width: 300px;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+#searchBox:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 10px var(--border-glow);
+}
+
+#summary {
+  margin-bottom: 15px;
+}
+
+#searchResults {
+  margin: 15px 0;
+  padding: 10px;
+  background: var(--bg-card);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+}
+
+th {
+  background: #2a2a2a;
+  color: var(--accent-pink);
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+tr:hover {
+  background-color: #232323;
+}
+
+.highlight {
+  color: var(--accent-pink);
+  font-weight: bold;
+}
+
+.error { color: #ff5c5c; }
+.loading { color: var(--text-muted); }
+
+
