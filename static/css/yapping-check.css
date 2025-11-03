@@ -80,14 +80,14 @@
 }
 
 .platform-section {
-    margin: 40px 0;
+    margin: 27.2px 0;
 }
 
 .platform-title {
     color: var(--accent-pink);
     font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 13.6px;
     text-align: center;
     text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
     position: relative;
@@ -108,22 +108,22 @@
 .project-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 30px;
+    gap: 6.8px;
+    margin-top: 20.4px;
 }
 
 .project-item {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 15px;
-    padding: 22px;
+    padding: 15.3px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     display: flex;
     gap: 17px;
     align-items: flex-start;
-    transform: translateY(-3px);
+    transform: translateY(-2.04px);
     transform-origin: top left;
     border-color: var(--accent-pink);
     box-shadow: var(--shadow-strong);
@@ -163,7 +163,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 13px;
+    margin-bottom: 8.5px;
     overflow: hidden;
     position: relative;
 }
@@ -179,7 +179,7 @@
 
 .project-name {
     color: var(--text-primary);
-    font-size: 0.92rem;
+    font-size: 0.828rem;
     font-weight: 600;
     text-align: center;
     word-break: break-word;
@@ -205,13 +205,13 @@
     flex-direction: column;
     gap: 7px;
     align-items: center;
-    margin-bottom: 13px;
+    margin-bottom: 8.5px;
 }
 
 .status-tag {
     padding: 5px 10px;
     border-radius: 13px;
-    font-size: 0.67rem;
+    font-size: 0.603rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -251,14 +251,14 @@
     flex-direction: column;
     gap: 5px;
     align-items: center;
-    margin-top: 5px;
-    margin-bottom: 8px;
+    margin-top: 3.4px;
+    margin-bottom: 5.1px;
 }
 
 .bonus-tag {
     padding: 4px 8px;
     border-radius: 10px;
-    font-size: 0.64rem;
+    font-size: 0.576rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -271,20 +271,20 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 11.9px;
 }
 
 .info-section, .todo-section {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    padding: 13px;
+    padding: 8.5px;
 }
 
 .section-title {
     color: var(--accent-pink);
-    font-size: 1.1088rem;
+    font-size: 0.99792rem;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 5.1px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -292,8 +292,8 @@
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
-    gap: 2px; /* reduced to 30% of previous 8px */
-    grid-auto-rows: 66.528px;
+    gap: 2px; /* keep very tight */
+    grid-auto-rows: 58.8081px;
 }
 
 .notice-btn {
@@ -368,8 +368,8 @@
 .info-item {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    height: 66.528px;
+    gap: 4px;
+    height: 58.8081px;
     justify-content: flex-start;
     overflow: hidden;
 }
@@ -387,7 +387,7 @@
     color: var(--text-primary);
     font-size: 0.84rem;
     font-weight: 600;
-    min-height: 17px;
+    min-height: 15.47px;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -412,9 +412,9 @@
 
 /* Keep coming-soon card size constant */
 .project-item.coming-soon {
-    height: 320px;
-    min-height: 320px;
-    max-height: 320px;
+    height: 217.6px;
+    min-height: 217.6px;
+    max-height: 217.6px;
 }
 
 .coming-soon .project-name { color: var(--accent-pink); }
@@ -424,10 +424,10 @@
 
 /* Reduce font size inside info and todo sections to 80% */
 .info-section .section-title,
-.todo-section .section-title { font-size: 0.887rem; }
-.info-section .info-label { font-size: 0.803rem; }
-.info-section .info-value { font-size: 0.887rem; }
-.todo-section .todo-content { font-size: 0.887rem; }
+.todo-section .section-title { font-size: 0.7983rem; }
+.info-section .info-label { font-size: 0.7227rem; }
+.info-section .info-value { font-size: 0.7983rem; }
+.todo-section .todo-content { font-size: 0.7983rem; }
 
 @media (max-width: 768px) {
     .category-buttons { flex-direction: column; align-items: center; }
@@ -437,19 +437,19 @@
     .counter-text { font-size: 0.8rem; padding: 4px 8px; }
     .platform-title { font-size: 1.5rem; }
     .project-list { grid-template-columns: 1fr; }
-    .project-item { flex-direction: column; text-align: center; height: auto; padding: 17px; gap: 13px; }
-    .project-item.coming-soon { height: 320px; min-height: 320px; max-height: 320px; }
+    .project-item { flex-direction: column; text-align: center; height: auto; padding: 11.9px; gap: 8.5px; }
+    .project-item.coming-soon { height: 217.6px; min-height: 217.6px; max-height: 217.6px; }
     .project-left { min-width: auto; }
     .project-image { width: 84px; height: 84px; }
-    .project-name { font-size: 0.84rem; }
-    .status-tag { font-size: 0.67rem; padding: 5px 10px; }
-    .bonus-tag { font-size: 0.64rem; padding: 4px 8px; }
-    .section-title { font-size: 0.84rem; }
+    .project-name { font-size: 0.756rem; }
+    .status-tag { font-size: 0.603rem; padding: 5px 10px; }
+    .bonus-tag { font-size: 0.576rem; padding: 4px 8px; }
+    .section-title { font-size: 0.756rem; }
     .status-tags, .bonus-tags { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     .info-grid { grid-template-columns: 1fr; }
-    .info-label { font-size: 0.76rem; }
-    .info-value { font-size: 0.84rem; }
-    .todo-content { font-size: 0.84rem; }
+    .info-label { font-size: 0.684rem; }
+    .info-value { font-size: 0.756rem; }
+    .todo-content { font-size: 0.756rem; }
 }
 
 
