@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const koreaButtons = document.querySelectorAll('[data-category="korea-bonus"]');
     const liveEndButtons = document.querySelectorAll('[data-category="only-live"], [data-category="only-end"]');
     const yapsButtons = document.querySelectorAll('[data-category="0yaps"], [data-category="need-yaps"]');
-    const payoutButtons = document.querySelectorAll('[data-category="monthly"], [data-category="weekly"], [data-category="daily"]');
+    const ecoButtons = document.querySelectorAll('[data-category="eco"]');
+    const payoutButtons = document.querySelectorAll('[data-category="monthly"], [data-category="weekly"]');
     
     allButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (category === 'korea-bonus') {
                 this.classList.toggle('active');
             }
-            else if (category === 'monthly' || category === 'weekly' || category === 'daily') {
+            else if (category === 'monthly' || category === 'weekly') {
                 if (this.classList.contains('active')) {
                     this.classList.remove('active');
                 } else {
@@ -40,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     this.classList.add('active');
                 }
             }
+            else if (category === 'eco') {
+                this.classList.toggle('active');
+            }
             
             filterProjects();
         });
@@ -56,11 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const activeYapsFilter = Array.from(yapsButtons)
             .find(btn => btn.classList.contains('active'))
             ?.getAttribute('data-category');
+        const activeEcoFilters = Array.from(ecoButtons)
+            .filter(btn => btn.classList.contains('active'))
+            .map(btn => btn.getAttribute('data-category'));
         const activePayoutFilter = Array.from(payoutButtons)
             .find(btn => btn.classList.contains('active'))
             ?.getAttribute('data-category');
         
-        const hasAnyActiveFilter = activeKoreaFilters.length > 0 || activeLiveEndFilter || activeYapsFilter || activePayoutFilter;
+        const hasAnyActiveFilter = activeKoreaFilters.length > 0 || activeLiveEndFilter || activeYapsFilter || activeEcoFilters.length > 0 || activePayoutFilter;
         
         projectItems.forEach(item => {
             if (item.classList.contains('coming-soon')) {
@@ -110,6 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     shouldShow = false;
                 }
             }
+            if (activeEcoFilters.length > 0 && shouldShow) {
+                const hasMatchingEcoFilter = activeEcoFilters.some(filter => 
+                    itemFilters.includes(filter)
+                );
+                if (!hasMatchingEcoFilter) {
+                    shouldShow = false;
+                }
+            }
             if (activePayoutFilter && shouldShow) {
                 if (!itemFilters.includes(activePayoutFilter)) {
                     shouldShow = false;
@@ -136,11 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const activeYapsFilter = Array.from(yapsButtons)
             .find(btn => btn.classList.contains('active'))
             ?.getAttribute('data-category');
+        const activeEcoFilters = Array.from(ecoButtons)
+            .filter(btn => btn.classList.contains('active'))
+            .map(btn => btn.getAttribute('data-category'));
         const activePayoutFilter = Array.from(payoutButtons)
             .find(btn => btn.classList.contains('active'))
             ?.getAttribute('data-category');
         
-        const hasAnyActiveFilter = activeKoreaFilters.length > 0 || activeLiveEndFilter || activeYapsFilter || activePayoutFilter;
+        const hasAnyActiveFilter = activeKoreaFilters.length > 0 || activeLiveEndFilter || activeYapsFilter || activeEcoFilters.length > 0 || activePayoutFilter;
         
         if (!hasAnyActiveFilter) {
             count = allItems.length;
