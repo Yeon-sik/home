@@ -22,4 +22,33 @@
     .button-overlay span { font-size: 0.65rem; }
 }
 
+/* 비활성화된 버튼 스타일 */
+.grid-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.grid-button.disabled:hover {
+    transform: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.grid-button.disabled::before {
+    opacity: 0;
+}
+
+.grid-button.disabled:hover::before {
+    opacity: 0;
+}
+
+.grid-button.disabled .button-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+}
+
+.grid-button.disabled .button-overlay span {
+    color: #666;
+    text-shadow: none;
+}
+
 
